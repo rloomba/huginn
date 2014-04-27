@@ -1,6 +1,6 @@
 <div class='container'>
   <div class='row'>
-    <div class='span12'>
+    <div class='col-md-12'>
       <div class="page-header">
         <h2>
           Editing your <%= @agent.short_type %>
@@ -11,8 +11,8 @@
       <%= render 'form' %>
 
       <div class="btn-group">
-        <%= link_to '<i class="icon-chevron-left"></i> Back'.html_safe, agents_path, class: "btn" %>
-        <%= link_to '<i class="icon-asterisk"></i> Show'.html_safe, agent_path(@agent), class: "btn" %>
+        <%= link_to '<span class="glyphicon glyphicon-chevron-left"></span> Back'.html_safe, agents_path, class: "btn btn-default" %>
+        <%= link_to '<span class="glyphicon glyphicon-asterisk"></span> Show'.html_safe, agent_path(@agent), class: "btn btn-default" %>
       </div>
     </div>
   </div>
