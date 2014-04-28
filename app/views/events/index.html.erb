@@ -1,6 +1,6 @@
 <div class='container'>
   <div class='row'>
-    <div class='span12'>
+    <div class='col-md-12'>
       <div class="page-header">
         <h2>
           Your Events <%= @agent && "from #{@agent.name}" %>
@@ -22,10 +22,10 @@
           <td><%= time_ago_in_words event.created_at %> ago</td>
           <td class='payload'><%= truncate event.payload.to_json, :length => 90, :omission => "" %></td>
           <td>
-            <div class="btn-group">
-              <%= link_to 'Show', event_path(event), class: "btn btn-mini" %>
-              <%= link_to 'Re-emit', reemit_event_path(event), method: :post, data: { confirm: 'Are you sure you want to duplicate this event and emit the new one now?' }, class: "btn btn-mini" %>
-              <%= link_to 'Delete', event_path(event), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini" %>
+            <div class="btn-group btn-group-xs">
+              <%= link_to 'Show', event_path(event), class: "btn btn-default" %>
+              <%= link_to 'Re-emit', reemit_event_path(event), method: :post, data: { confirm: 'Are you sure you want to duplicate this event and emit the new one now?' }, class: "btn btn-default" %>
+              <%= link_to 'Delete', event_path(event), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
             </div>
           </td>
         </tr>
